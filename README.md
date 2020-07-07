@@ -1,6 +1,18 @@
-# all_ios_widgits
+# Flutter-platfrom-aware-other-widgits
 
-A new Flutter project.
+this repo is example to add platfrom aware widgits in ur app fast easy and customisable way 
+android ios date time and datetime picker
+android radio group and Ios segmented control
+
+need to add 
+pub.dev [flutter_platform_widgets](https://pub.dev/packages/flutter_platform_widgets) 
+or
+github [flutter_platform_widgets](https://github.com/stryder-dev/flutter_platform_widgets) 
+
+
+
+
+
 
 ## Getting Started
 
