@@ -117,10 +117,10 @@ class _HomeState extends State<Home> {
     List<dynamic> res = new List();
     if (dt != null && dt.hour < 14) {
       res.add(true);
-      res.add("test");
+      res.add("Error");
     } else {
       res.add(false);
-      res.add("test");
+      res.add("Error");
     }
     return res;
   }
