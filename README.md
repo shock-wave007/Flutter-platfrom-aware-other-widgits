@@ -4,13 +4,35 @@ this repo is example to add platfrom aware widgits in ur app fast easy and custo
 android ios date time and datetime picker
 android radio group and Ios segmented control
 
-need to add 
+<img src="https://github.com/shock-wave007/Flutter-platfrom-aware-other-widgits/blob/master/images/Screenshot_1594114161.png" width="300" /> <img src="https://github.com/shock-wave007/Flutter-platfrom-aware-other-widgits/blob/master/images/Screenshot_1594115485.png" width="300" />
+<img src="https://github.com/shock-wave007/Flutter-platfrom-aware-other-widgits/blob/master/images/Screenshot_1594115516.png" width="300" /> <img src="https://github.com/shock-wave007/Flutter-platfrom-aware-other-widgits/blob/master/images/Screenshot_1594115534.png" width="300" /> 
+
+
+# need to add 
+
 pub.dev [flutter_platform_widgets](https://pub.dev/packages/flutter_platform_widgets) 
 or
 github [flutter_platform_widgets](https://github.com/stryder-dev/flutter_platform_widgets) 
 
+# usage
 
+```dart
+PwaRadioGrpSegment(
+                strList: ["SunLight", "MoonLight", "NoLight"],
+                fn: (a) => setState(() =>{
+                                        mREs = a;
+                                        });
+                cVal: mREs,
+              ),
+```
 
+```dart
+PwaDateTimePicker(
+                  isTime: false,
+                  inlDate: mDate,
+                  timeSetter: (value) => _updatemDate(value),
+                )
+```
 
 
 
