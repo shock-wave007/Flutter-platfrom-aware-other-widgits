@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-class PwaRadioGrpSegment extends StatelessWidget {
+class PwaContextMenu extends StatelessWidget {
   final List<String> strList;
   final Function fn;
   final dynamic cVal;
   final bool isIosSliding;
-  const PwaRadioGrpSegment(
+  const PwaContextMenu(
       {Key key, this.strList, this.fn, this.cVal, this.isIosSliding = true})
       : super(key: key);
 
@@ -41,11 +41,27 @@ class PwaRadioGrpSegment extends StatelessWidget {
     Map<dynamic, Widget> temp = strListToDyWdMap(strList);
     List<Widget> _list = temp.values.toList();
     return PlatformWidget(
-        cupertino: (_, __) => isIosSliding
-            ? CupertinoSlidingSegmentedControl(
-                groupValue: cVal, children: temp, onValueChanged: (a) => fn(a))
-            : CupertinoSegmentedControl(
-                groupValue: cVal, children: temp, onValueChanged: (a) => fn(a)),
+        cupertino: (_, __) => Center(
+            child: Container(
+                width: 100,
+                height: 100,
+                child: CupertinoContextMenu(
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                    actions: <Widget>[
+                      CupertinoContextMenuAction(
+                        child: const Text('Action one'),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      CupertinoContextMenuAction(
+                          child: const Text('Action two'),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          })
+                    ]))),
         material: (_, __) => Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: _list

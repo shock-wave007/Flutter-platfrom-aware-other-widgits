@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PlatformProvider(
-        initialPlatform: TargetPlatform.iOS,
+        initialPlatform: TargetPlatform.android,
         builder: (BuildContext context) {
           return PlatformApp(
             debugShowCheckedModeBanner: false,
